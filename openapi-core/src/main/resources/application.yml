@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: openapi-core
+  cloud:
+    gateway:
+      enabled: true
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: login
+          uri: lb://auth
+          predicates:
+            - Path= /login/**
+          filters:
+            - StripPrefix=1

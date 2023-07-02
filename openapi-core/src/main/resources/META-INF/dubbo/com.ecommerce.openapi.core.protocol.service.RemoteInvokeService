@@ -1,0 +1,1 @@
+dubbo=com.ecommerce.openapi.core.protocol.service.spi.RemoteInvokeDubboService
